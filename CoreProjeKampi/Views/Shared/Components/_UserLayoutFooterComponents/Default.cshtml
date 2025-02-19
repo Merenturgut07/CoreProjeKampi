@@ -1,0 +1,14 @@
+﻿<div class="row">
+	<div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+		<h3>Hakkımızda</h3>
+		<p>Bir blog ( " weblog " un kısaltılmış hali ) [ 1 ], ayrı, genellikle gayri resmi günlük tarzı metin girişlerinden (gönderiler) oluşan bilgilendirici bir web sitesidir . Gönderiler genellikle ters kronolojik sırayla görüntülenir, böylece en son gönderi ilk olarak, web sayfasının en üstünde görünür...</p>
+		<div class="read">
+			<a href="/Blog/Index/" class="btn btn-primary read-m">Devamını Oku </a>
+		</div>
+	</div>
+
+	@await Component.InvokeAsync("_UserLayoutFooterLast3BlogComponents")
+
+
+	@await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+</div>

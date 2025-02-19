@@ -1,0 +1,48 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/UserLayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<body>
+	<section class="main-content-w3layouts-agileits">
+		<div class="container">
+			<h3 class="tittle">Hakkımızda</h3>
+			<div class="row inner-sec">
+				<!--left-->
+				@await Component.InvokeAsync("_AboutHeadPartialComponents")
+				
+				<!--//left-->
+				<!--right-->
+				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+					<div class="right-blog-info text-left">
+						<div class="tech-btm">
+							<img src="~/CoreBlogTema/images/banner1.jpg" class="img-fluid" alt="">
+						</div>
+
+						@await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+
+						@await Component.InvokeAsync("_AboutSocialMediaPartialComponents")
+
+
+
+						<div class="tech-btm">
+
+
+							@await Component.InvokeAsync("_BlogReadAllWriterOtherBlogComponents")
+
+						</div>
+					</div>
+
+				</aside>
+				<!--//right-->
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>
+
+						@* Unable to connect  to web server 'CoreProjeKampi' the web server is no longer running  *@

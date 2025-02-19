@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+@await Component.InvokeAsync("_UserLayoutHeadComponents")
+
+<body>
+	<!--Header-->
+
+	<header>
+		<div class="top-bar_sub_w3layouts container-fluid">
+			<div class="row">
+				<div class="col-md-4 logo text-left">
+					<a class="navbar-brand" href="/Blog/Index/">
+						<i class="fab fa-linode"></i> Core 6.0 Blog
+					</a>
+				</div>
+
+				@await Component.InvokeAsync("_UserLayoutSignInRegisterComponents")
+
+				@await Component.InvokeAsync("_UserLayoutSocialMediaComponents")
+
+			</div>
+		</div>
+		@await Component.InvokeAsync("_UserLayoutNavbarComponents")
+	</header>
+	@RenderBody()
+	<footer>
+		<div class="container">
+			@await Component.InvokeAsync("_UserLayoutFooterComponents")
+
+
+			@await Component.InvokeAsync("_UserLayoutFooterSocialMediaComponents")
+
+
+		</div>
+	</footer>
+
+	<script src="~/CoreBlogTema/js/jquery-2.2.3.min.js"></script>
+	<script src="~/CoreBlogTema/js/move-top.js"></script>
+	<script src="~/CoreBlogTema/js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<a href="#home" class="scroll" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+
+	<script src="~/CoreBlogTema/js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
+
+

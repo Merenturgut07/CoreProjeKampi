@@ -11,7 +11,6 @@
 ![Image](https://github.com/user-attachments/assets/c9493e6d-3d37-4c94-b4ed-dd0a2e225618)
 ![Image](https://github.com/user-attachments/assets/87c5c404-514c-4d4a-8e63-4f0f5a159dc9)
 ![Image](https://github.com/user-attachments/assets/c2f061a5-7a93-4fa2-8e32-0d01d831c3eb)
-
 <br/>
 <br/>
 ## Yazar Paneli 
@@ -22,7 +21,6 @@
 ![Image](https://github.com/user-attachments/assets/6dd8fea1-2f7b-4921-8b48-a4fd6177a584)
 ![Image](https://github.com/user-attachments/assets/93cc5da8-eade-496a-b296-8dad8827458c)
 ![Image](https://github.com/user-attachments/assets/f781f548-7b75-4d4c-9d8f-fc9fb443ae58)
-
 <br/>
 <br/>
 ## Admin Paneli 

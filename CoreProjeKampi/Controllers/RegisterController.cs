@@ -25,7 +25,7 @@ namespace CoreProjeKampi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(Writer writer)
+        public IActionResult Index(Writers writer)
         {
             WriterValidator validationRules = new WriterValidator();
             ValidationResult result = validationRules.Validate(writer);

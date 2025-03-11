@@ -23,7 +23,7 @@ namespace CoreProjeKampi.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult SubscribeMail(NewsLetter p)
+        public IActionResult SubscribeMail(NewsLetter p)
         {
             p.MailStatus = true;
             _newsLetterService.TInsert(p);

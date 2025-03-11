@@ -1,0 +1,60 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<Category>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="ibox ">
+			<div class="ibox-title">
+				<h5>Kategoriler Tablosu </h5>
+				<div class="ibox-tools">
+					<a class="collapse-link">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-wrench"></i>
+					</a>
+					<a class="close-link">
+						<i class="fa fa-times"></i>
+					</a>
+				</div>
+			</div>
+			<div class="ibox-content">
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Kategori Adı </th>
+							<th>Pasif Yap</th>
+							<th>Aktif Yap</th>
+							<th>Güncelle </th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>@item.CategoryId</td>
+								<td>@item.CategoryName</td>
+								<td><a href="/Admin/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-info">Pasif</a> </td>
+								<td><a href="/Admin/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-danger">Aktif</a> </td>
+								<td><a href="#" class="btn btn-success">Güncelle</a> </td>
+
+							</tr>
+						}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<a href="/Admin/AdminCategory/AddCategory/" class="btn btn-info">Yeni Kategori Ekle</a>
+</div>
+<br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+

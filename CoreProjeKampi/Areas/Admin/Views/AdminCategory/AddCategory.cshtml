@@ -1,0 +1,21 @@
+﻿@model Category
+@{
+	ViewData["Title"] = "AddCategory";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<h1>Yeni Kategori Girişi</h1>
+@using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
+{
+	@Html.ValidationMessageFor(x => x.CategoryName, "", new { style = "color: blue; font-weight: bold;" })
+	@Html.Label("Kategori Adı")
+	@Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+
+	<br />
+	@Html.ValidationMessageFor(x => x.CategoryDescription, "", new { style = "color: red; font-weight: bold;" })
+	@Html.Label("Kategori Açıklaması")
+	@Html.TextAreaFor(x => x.CategoryDescription, 8, 2, new { @class = "form-control" })
+
+	<br />
+	<button class="btn btn-info">Kategoriyi Kaydet</button>
+}
+

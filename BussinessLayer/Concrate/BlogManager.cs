@@ -23,6 +23,11 @@ namespace BussinessLayer.Concrate
             return _blogDal.GetlistWithCategory();
         }
 
+        public List<Blog> GetlistWithCategoryByWriter(int id)
+        {
+            return _blogDal.GetlistWithCategoryByWriter(id);
+        }
+
         public void TDelete(int id)
         {
             _blogDal.Delete(id);
@@ -42,10 +47,7 @@ namespace BussinessLayer.Concrate
             return _blogDal.TGetList(x => x.BlogId == id);
         }
 
-        public List<Blog> TGetListByFilter()
-        {
-            throw new NotImplementedException();
-        }
+
 
 
         public void TInsert(Blog entity)
@@ -72,6 +74,11 @@ namespace BussinessLayer.Concrate
         {
 
             return _blogDal.TGetList(x => x.WriterId == id);
+        }
+
+        public List<Blog> TGetListByFilter()
+        {
+            throw new NotImplementedException();
         }
     }
 }

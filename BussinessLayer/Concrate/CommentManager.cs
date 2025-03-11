@@ -24,6 +24,11 @@ namespace BussinessLayer.Concrate
             
         }
 
+        public List<Comment> GetlistWithBlog()
+        {
+            return _commentDal.GetlistWithBlog();
+        }
+
         public void TDelete(int id)
         {
             throw new NotImplementedException();

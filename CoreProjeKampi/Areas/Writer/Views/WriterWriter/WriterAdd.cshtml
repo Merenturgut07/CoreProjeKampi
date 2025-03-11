@@ -1,0 +1,48 @@
+﻿@model AddProfileImage
+@{
+    ViewData["Title"] = "WriterAdd";
+    Layout = "~/Areas/Writer/Views/WriterLayout/Index.cshtml";
+}
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title"> Yazar Profil Bilgileri Düzenleme</h4>
+				<div class="forms-sample">
+					@Html.HiddenFor(x => x.WriterId, new { @class = "form-control" })
+
+					<div class="form-group">
+						<label for="exampleInputName1">İsim </label>
+						@Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail3"> Mail Adresi</label>
+						@Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword4">Şifre</label>
+						@Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword4">Şifre Tekrarı</label>
+						@Html.TextBoxFor(x => x.WriterPasswordConfirm, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label>Yazar Görseli</label>
+						<input type="file" name="WriterImage" />
+					</div>
+					<div class="form-group">
+						<label for="exampleTextarea1">Yazar Hakkında</label>
+						@Html.TextAreaFor(x => x.WriterAbout, 8, 2, new { @class = "form-control" })
+					</div>
+					<button type="submit" class="btn btn-gradient-primary mr-2">Kaydet</button>
+					<button class="btn btn-light">İptal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+

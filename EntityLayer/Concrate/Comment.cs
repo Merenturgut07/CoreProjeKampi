@@ -15,6 +15,8 @@ namespace EntityLayer.Concrate
         public string CommentTitle { get; set; }
         public string CommentContent { get; set; }
         public DateTime CommentDate { get; set; }
+
+        public int BlogScore { get; set; }
         public bool CommentStatus { get; set; }
 
 

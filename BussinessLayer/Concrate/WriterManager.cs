@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BussinessLayer.Concrate
 {
-    public class WriterManager:IWriterService
+    public class WriterManager : IWriterService
     {
         IWriterDal _writerDal;
 
@@ -18,10 +18,15 @@ namespace BussinessLayer.Concrate
             _writerDal = writerDal;
         }
 
-        public List<Writer> GetListAll(int id)
+        public List<Writers> GetListAll(int id)
         {
             throw new NotImplementedException();
 
+        }
+
+        public List<Writers> GetWriterById(int id)
+        {
+            return _writerDal.TGetList(x => x.WriterId == id);
         }
 
         public void TDelete(int id)
@@ -29,32 +34,32 @@ namespace BussinessLayer.Concrate
             _writerDal.Delete(id);
         }
 
-        public Writer TGetById(int id)
+        public Writers TGetById(int id)
         {
             return _writerDal.GetById(id);
         }
 
-        public List<Writer> TGetListAll()
+        public List<Writers> TGetListAll()
         {
             return _writerDal.GetList();
         }
 
-        public List<Writer> TGetListByFilter()
+        public List<Writers> TGetListByFilter()
         {
             throw new NotImplementedException();
         }
 
-        public List<Writer> TGetListByFilter(int id)
+        public List<Writers> TGetListByFilter(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void TInsert(Writer entity)
+        public void TInsert(Writers entity)
         {
-           _writerDal.Insert(entity);
+            _writerDal.Insert(entity);
         }
 
-        public void TUpdate(Writer entity)
+        public void TUpdate(Writers entity)
         {
             _writerDal.Update(entity);
         }
